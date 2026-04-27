@@ -244,7 +244,7 @@ PulseCoreApp/
 
 Ahmad — Senior iOS Engineer  
 MSc Computer Vision, Robotics & Machine Learning — University of Surrey  
-Open source contributions: OpenCV (PR #28535 merged into 4.x), Google WebRTC
+Open source contributions: OpenCV , Google WebRTC
 
 ---
 
