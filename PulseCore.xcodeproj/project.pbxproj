@@ -6,14 +6,69 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E0A5E8B32F91A1C800FDBBBB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A5E8B22F91A1C800FDBBBB /* CoreVideo.framework */; };
+		E0A5E8B52F91A1CF00FDBBBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A5E8B42F91A1CF00FDBBBB /* AVFoundation.framework */; };
+		E0A5E8B72F91A1D400FDBBBB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A5E8B62F91A1D400FDBBBB /* CoreMedia.framework */; };
+		E0A5E9162F91ABA400FDBBBB /* PulseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04AB4332F90548200289DA8 /* PulseCore.framework */; };
+		E0A5E9172F91ABA400FDBBBB /* PulseCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E04AB4332F90548200289DA8 /* PulseCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0A5E9182F91ABA400FDBBBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E04AB42A2F90548200289DA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E04AB4322F90548200289DA8;
+			remoteInfo = PulseCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0A5E91A2F91ABA400FDBBBB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0A5E9172F91ABA400FDBBBB /* PulseCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E04AB4332F90548200289DA8 /* PulseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PulseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04AB4432F90549F00289DA8 /* PulseCoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseCoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A5E8B22F91A1C800FDBBBB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		E0A5E8B42F91A1CF00FDBBBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		E0A5E8B62F91A1D400FDBBBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E0A5E83A2F91A05100FDBBBB /* Exceptions for "PulseCore" folder in "PulseCore" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Bridge/PulseCoreProcessor.h,
+				PulseCore.h,
+			);
+			target = E04AB4322F90548200289DA8 /* PulseCore */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E04AB4352F90548200289DA8 /* PulseCore */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E0A5E83A2F91A05100FDBBBB /* Exceptions for "PulseCore" folder in "PulseCore" target */,
+			);
 			path = PulseCore;
+			sourceTree = "<group>";
+		};
+		E04AB4442F90549F00289DA8 /* PulseCoreApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PulseCoreApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +78,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A5E8B72F91A1D400FDBBBB /* CoreMedia.framework in Frameworks */,
+				E0A5E8B32F91A1C800FDBBBB /* CoreVideo.framework in Frameworks */,
+				E0A5E8B52F91A1CF00FDBBBB /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04AB4402F90549F00289DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A5E9162F91ABA400FDBBBB /* PulseCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				E04AB4352F90548200289DA8 /* PulseCore */,
+				E04AB4442F90549F00289DA8 /* PulseCoreApp */,
+				E04AB4802F905AE500289DA8 /* Frameworks */,
 				E04AB4342F90548200289DA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +109,19 @@
 			isa = PBXGroup;
 			children = (
 				E04AB4332F90548200289DA8 /* PulseCore.framework */,
+				E04AB4432F90549F00289DA8 /* PulseCoreApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E04AB4802F905AE500289DA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A5E8B62F91A1D400FDBBBB /* CoreMedia.framework */,
+				E0A5E8B42F91A1CF00FDBBBB /* AVFoundation.framework */,
+				E0A5E8B22F91A1C800FDBBBB /* CoreVideo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +160,30 @@
 			productReference = E04AB4332F90548200289DA8 /* PulseCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E04AB4422F90549F00289DA8 /* PulseCoreApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E04AB44B2F9054A000289DA8 /* Build configuration list for PBXNativeTarget "PulseCoreApp" */;
+			buildPhases = (
+				E04AB43F2F90549F00289DA8 /* Sources */,
+				E04AB4402F90549F00289DA8 /* Frameworks */,
+				E04AB4412F90549F00289DA8 /* Resources */,
+				E0A5E91A2F91ABA400FDBBBB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0A5E9192F91ABA400FDBBBB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E04AB4442F90549F00289DA8 /* PulseCoreApp */,
+			);
+			name = PulseCoreApp;
+			packageProductDependencies = (
+			);
+			productName = PulseCoreApp;
+			productReference = E04AB4432F90549F00289DA8 /* PulseCoreApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +195,10 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					E04AB4322F90548200289DA8 = {
+						CreatedOnToolsVersion = 26.0.1;
+						LastSwiftMigration = 2600;
+					};
+					E04AB4422F90549F00289DA8 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
@@ -111,12 +218,20 @@
 			projectRoot = "";
 			targets = (
 				E04AB4322F90548200289DA8 /* PulseCore */,
+				E04AB4422F90549F00289DA8 /* PulseCoreApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E04AB4312F90548200289DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E04AB4412F90549F00289DA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +248,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E04AB43F2F90549F00289DA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0A5E9192F91ABA400FDBBBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E04AB4322F90548200289DA8 /* PulseCore */;
+			targetProxy = E0A5E9182F91ABA400FDBBBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E04AB43A2F90548200289DA8 /* Debug */ = {
@@ -267,14 +397,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VVS3USCHVC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PulseCore/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -282,9 +419,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.iosapp.PulseCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -293,6 +432,8 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_MODULE = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,14 +444,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VVS3USCHVC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PulseCore/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,9 +466,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.iosapp.PulseCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -329,6 +479,77 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_MODULE = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E04AB44C2F9054A000289DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVS3USCHVC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PulseCore needs camera access to measure your heart rate and vitals";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PulseCore uses the microphone for breathing rate detection";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.iosapp.PulseCoreApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E04AB44D2F9054A000289DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVS3USCHVC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PulseCore needs camera access to measure your heart rate and vitals";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PulseCore uses the microphone for breathing rate detection";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.iosapp.PulseCoreApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,6 +573,15 @@
 			buildConfigurations = (
 				E04AB43D2F90548200289DA8 /* Debug */,
 				E04AB43E2F90548200289DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E04AB44B2F9054A000289DA8 /* Build configuration list for PBXNativeTarget "PulseCoreApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E04AB44C2F9054A000289DA8 /* Debug */,
+				E04AB44D2F9054A000289DA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
