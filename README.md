@@ -5,6 +5,27 @@ No hardware. No wearable. No cloud. Just a finger on a camera.
 
 ---
 
+## Demo
+
+https://www.linkedin.com/posts/[your-linkedin-post-link]
+
+---
+
+## Screenshots
+
+<p float="left">
+  <img src="Screenshots/img2.PNG" width="180"/>
+  <img src="Screenshots/img3.PNG" width="180"/>
+  <img src="Screenshots/img11.PNG" width="180"/>
+  <img src="Screenshots/img2.PNG" width="180"/>
+</p>
+
+| Home screen | Finger scan | Results | Face scan |
+|:-----------:|:-----------:|:-------:|:---------:|
+| Body battery + last reading | Live PPG waveform + BPM | Full vitals + AFib | CHROM rPPG |
+
+---
+
 ## What it does
 
 PulseCore measures cardiovascular health in two modes:
@@ -101,9 +122,9 @@ Front camera frame (24fps, no torch)
 AFib is detected using a three-metric voting system on RR intervals:
 
 ```
-Metric 1 — Shannon entropy    > 0.85  → 1 vote
-Metric 2 — Normalised RMSSD   > 0.25  → 2 votes (primary)
-Metric 3 — Coefficient of variation > 0.18 → 1 vote
+Metric 1 — Shannon entropy          > 0.85  → 1 vote
+Metric 2 — Normalised RMSSD         > 0.25  → 2 votes (primary)
+Metric 3 — Coefficient of variation > 0.18  → 1 vote
 
 ≥ 3 votes → Irregular rhythm
 < 3 votes → Normal rhythm
@@ -151,26 +172,24 @@ Cmd+B
 PulseCore/
 ├── Core/
 │   ├── Signal/
-│   │   ├── PPGProcessor.hpp/cpp       — finger PPG extraction
-│   │   ├── rPPGProcessor.hpp/cpp      — face rPPG + CHROM
-│   │   └── SignalProcessor.hpp/cpp    — FFT, RR, Butterworth
+│   │   ├── PPGProcessor.hpp/cpp        — finger PPG extraction
+│   │   ├── rPPGProcessor.hpp/cpp       — face rPPG + CHROM
+│   │   └── SignalProcessor.hpp/cpp     — FFT, RR, Butterworth
 │   ├── Quality/
-│   │   └── QualityFilter.hpp/cpp      — SNR + motion check
+│   │   └── QualityFilter.hpp/cpp       — SNR + motion check
 │   ├── Inference/
-│   │   ├── AFibDetector.hpp/cpp       — rhythm analysis
-│   │   ├── GlucoseEstimator.hpp/cpp   — waveform morphology
+│   │   ├── AFibDetector.hpp/cpp        — rhythm analysis
+│   │   ├── GlucoseEstimator.hpp/cpp    — waveform morphology
 │   │   ├── StressRecoveryScore.hpp/cpp — Body Battery
-│   │   ├── WellnessScorer.hpp/cpp     — signal fusion
-│   │   └── CalibrationEngine.hpp/cpp  — learning loop
+│   │   ├── WellnessScorer.hpp/cpp      — signal fusion
+│   │   └── CalibrationEngine.hpp/cpp   — learning loop
 │   └── Warning/
-│       └── EarlyWarningEngine.hpp/cpp — 48hr prediction
+│       └── EarlyWarningEngine.hpp/cpp  — 48hr prediction
 ├── Bridge/
-│   ├── PulseCoreProcessor.h           — ObjC interface
-│   └── PulseCoreProcessor.mm          — ObjC++ bridge
+│   ├── PulseCoreProcessor.h            — ObjC interface
+│   └── PulseCoreProcessor.mm           — ObjC++ bridge
 └── Swift/
-    ├── PulseCoreSession.swift          — public SDK API
-    ├── PulseCoreResult.swift           — result types
-    └── PulseCoreDelegate.swift         — delegate protocol
+    └── PulseCoreSession.swift           — public SDK API
 
 PulseCoreApp/
 ├── Screens/
@@ -178,7 +197,7 @@ PulseCoreApp/
 │   ├── ScanView.swift
 │   ├── ResultsView.swift
 │   └── DashboardView.swift
-└── ReadingsStore.swift                 — local persistence
+└── ReadingsStore.swift                  — local persistence
 ```
 
 ---
@@ -196,6 +215,23 @@ PulseCoreApp/
 
 ---
 
+## Roadmap
+
+**v1 (current)**
+- Active finger scan — full vitals
+- Active face scan — contactless HR
+- AFib detection
+- Body Battery score
+- 48-hour early warning
+
+**v2 (in development)**
+- Passive rPPG monitoring — continuous, no scanning needed
+- Emotion + vitals fusion — affective computing
+- Glucose calibration with glucometer integration
+- Anti-spoofing for face scan
+
+---
+
 ## References
 
 - de Haan, G. & Jeanne, V. (2013). Robust Pulse Rate From Chrominance-Based rPPG. *IEEE Transactions on Biomedical Engineering.*
@@ -208,7 +244,7 @@ PulseCoreApp/
 
 Ahmad — Senior iOS Engineer  
 MSc Computer Vision, Robotics & Machine Learning — University of Surrey  
-Open source contributions: OpenCV, WebRTC
+Open source contributions: OpenCV (PR #28535 merged into 4.x), Google WebRTC
 
 ---
 
